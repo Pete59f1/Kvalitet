@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Interface
 {
-    interface IPublisher
+    public interface IPublisher
     {
+        void RegisterSubscriber(ISubscriber observer);
+        void RemoveSubscriber(ISubscriber observer);
+        void NotifySubscribers();
     }
 }

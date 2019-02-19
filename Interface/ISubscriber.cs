@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Interface
 {
-    interface ISubscriber
+    public interface ISubscriber
     {
+        void Update(IPublisher publisher);
     }
 }
