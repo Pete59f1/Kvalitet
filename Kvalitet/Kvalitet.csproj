@@ -99,6 +99,10 @@
       <Project>{3aaf9b78-5b54-4182-adc1-969f338af6d2}</Project>
       <Name>Application</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Interface\Interface.csproj">
+      <Project>{679d7e8d-cd33-45a2-8b77-73219f562c8d}</Project>
+      <Name>Interface</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
