@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="SteelBlue">
-        <Button Content="Opret Order" HorizontalAlignment="Left" Margin="586,100,0,0" VerticalAlignment="Top" Width="100" Height="30" Name="btnCreateOrder" Click="BtnCreateOrder_Click"/>
-        <Button Content="Find Kunde" HorizontalAlignment="Left" Margin="586,200,0,0" VerticalAlignment="Top" Width="100" Height="30" Name="btnFindCustomer" Click="BtnFindCustomer_Click"/>
-        <Button Content="Opret Kunde" HorizontalAlignment="Left" Margin="586,150,0,0" VerticalAlignment="Top" Width="100" Height="30" Name="btnCreateCustomer" Click="BtnCreateCustomer_Click"/>
+        <Button Content="Opret Order" HorizontalAlignment="Left" Margin="586,155,0,0" VerticalAlignment="Top" Width="100" Height="30" Name="btnCreateOrder" Click="BtnCreateOrder_Click"/>
+        <Button Content="Find Kunde" HorizontalAlignment="Left" Margin="586,279,0,0" VerticalAlignment="Top" Width="100" Height="30" Name="btnFindCustomer" Click="BtnFindCustomer_Click"/>
+        <Button Content="Opret Kunde" HorizontalAlignment="Left" Margin="586,217,0,0" VerticalAlignment="Top" Width="100" Height="30" Name="btnCreateCustomer" Click="BtnCreateCustomer_Click"/>
         <Label Content="Velkommen" FontSize="40" FontStyle="Italic" FontWeight="Bold" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Height="87" Width="322" Name="lblWelcome" Margin="239,10,0,0"/>
         <Image HorizontalAlignment="Left" Height="215" Margin="35,155,0,0" VerticalAlignment="Top" Width="441" Name="imgMain" Source="PrettyHair.png"/>
-        <Button Content="Luk" HorizontalAlignment="Left" Margin="586,250,0,0" VerticalAlignment="Top" Width="100" Height="30" Name="btnClose" Click="BtnClose_Click"/>
+        <Button Content="Luk" HorizontalAlignment="Left" Margin="586,340,0,0" VerticalAlignment="Top" Width="100" Height="30" Name="btnClose" Click="BtnClose_Click"/>
 
     </Grid>
 </Window>
