@@ -39,5 +39,10 @@ namespace Kvalitet
         {
 
         }
+
+        private void BtnClose_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
