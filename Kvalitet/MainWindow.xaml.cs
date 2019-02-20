@@ -24,5 +24,20 @@ namespace Kvalitet
         {
             InitializeComponent();
         }
+
+        private void BtnCreateOrder_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnCreateCustomer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnFindCustomer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
