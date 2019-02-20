@@ -24,12 +24,12 @@ namespace Domain
 
         public void AddOrderLine(Product product, int quantity, double price)
         {
-
+            OrderLines.Add(new SaleOrderLine { Product = product, Quantity = quantity, Price = price });
         }
 
         public void RemoveOrderLine(int index)
         {
-
+            OrderLines.RemoveAt(index);
         }
 
         public List<SaleOrderLine> GetOrderLines()
