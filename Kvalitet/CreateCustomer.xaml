@@ -1,0 +1,19 @@
+﻿<Window x:Class="Kvalitet.CreateCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kvalitet"
+        mc:Ignorable="d"
+        Title="CreateCustomer" Height="450" Width="800">
+    <Grid Background="SteelBlue">
+        <Label x:Name="lblCreateCus" Content="Opret Kunde" FontSize="32" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="285,26,0,0"/>
+        <Button x:Name="btnCreateCustomer" Content="Opret kunde" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="540,317,0,0" Height="23" Click="BtnCreateCustomer_Click"/>
+        <TextBox x:Name="txtName" ToolTip="Udfyld med navn"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="323,110,0,0"/>
+        <TextBox x:Name="txtAdress" ToolTip="Udfyld med addresse" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="323,160,0,0"/>
+        <TextBox x:Name="txtZip" ToolTip="Udfyld med postnummer" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="323,215,0,0"/>
+        <TextBox x:Name="txtTown" ToolTip="Udfyld med by" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="323,267,0,0"/>
+        <TextBox x:Name="txtTlph" ToolTip="Udfyld med telefonnummer" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="323,317,0,0"/>
+
+    </Grid>
+</Window>

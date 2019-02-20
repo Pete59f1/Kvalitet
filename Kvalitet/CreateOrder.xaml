@@ -1,0 +1,16 @@
+﻿<Window x:Class="Kvalitet.CreateOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kvalitet"
+        mc:Ignorable="d"
+        Title="CreateOrder" Height="450" Width="800">
+    <Grid Background="SteelBlue">
+        <Label x:Name="lblCreateTitel"  Content="Opret Ordre" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center" FontSize="32" HorizontalAlignment="Left" Height="53" Margin="240,24,0,0" VerticalAlignment="Top" Width="282"/>
+        <TextBox x:Name="txtDate" ToolTip="" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="321,144,0,0"/>
+        <TextBox x:Name="txtAddres" ToolTip="Udfyld med addresse" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="321,196,0,0"/>
+        <TextBox x:Name="txtZipp" ToolTip="Udfyld med postnummer" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="321,245,0,0"/>
+
+    </Grid>
+</Window>
