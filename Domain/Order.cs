@@ -9,7 +9,6 @@ namespace Domain
     public class Order
     {
         private List<SaleOrderLine> orderLines = new List<SaleOrderLine>();
-
         private Customer customer;
         private int orderId;
         private DateTime orderDate;

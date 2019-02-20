@@ -17,11 +17,11 @@ namespace Application
             repoList = new List<T>();
         }
 
-        public void AddCustomer(T rep)
+        public void Add(T rep)
         {
             RepoList.Add(rep);
         }
-        public void RemoveCustomer(int index)
+        public void Remove(int index)
         {
             RepoList.RemoveAt(index);
         }
