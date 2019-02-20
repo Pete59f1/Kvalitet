@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Domain;
 
-namespace Application
+namespace MyApplication
 {
     class ProductRepo: Repo<Product>
     {
