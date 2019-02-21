@@ -12,16 +12,8 @@ namespace MyApplication
 
     internal class DBControl 
     {
-        public event EventHandler<Exception> eventHandler;
-        public void NotifyObservers(Exception e)
-        {
-            if (eventHandler != null)   //Ensures that if there are no handlers,
-                                        //the event won't be raised
-            {
-                eventHandler(this, e);    //We can also replace
-                                                        //EventArgs.Empty with our own message
-            }
-        }
+       
+
         private static string connectionString = 
             "Server=michaldatabase.database.windows.net; Database= KvalitetProject; User Id=sasjumb; Password=Super123!;";
         public void CreateCustomer(string name, string address, int zip, string town, string tlf)
@@ -35,16 +27,16 @@ namespace MyApplication
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@Name",name));
                     cmd.Parameters.Add(new SqlParameter("@Address", address));
-                    cmd.Parameters.Add(new SqlParameter("@ZIP", zip));
+                    cmd.Parameters.Add(new SqlParameter("@ZIP", "weq"));
                     cmd.Parameters.Add(new SqlParameter("@Town", town));
                     cmd.Parameters.Add(new SqlParameter("@TLF", tlf));
 
                     cmd.ExecuteNonQuery();
-
+                    
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    NotifyObservers(e);
+                    
                 }
             }
         }
