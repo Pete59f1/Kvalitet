@@ -8,16 +8,17 @@
         Title="CreateOrder" Height="450" Width="800">
     <Grid Background="SteelBlue">
         <Label x:Name="lblCreateTitel"  Content="Opret Ordre" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center" FontSize="32" HorizontalAlignment="Left" Height="53" Margin="240,24,0,0" VerticalAlignment="Top" Width="282"/>
-        <Label x:Name="lblro" Content="Produkt Nr" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="76,92,0,0"/>
+        <Label x:Name="lblro" Content="Produkt" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="76,92,0,0"/>
         <Label x:Name="lblAntal" Content="Antal" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="253,92,0,0" RenderTransformOrigin="0.911,0.459"/>
         <Label x:Name="lblPris" Content="Pris" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="447,92,0,0"/>
-        <TextBox x:Name="txtantalpro" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="253,149,0,0"/>
+        <TextBox x:Name="txtantalpro" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="253,145,0,0"/>
         <Label x:Name="lblpropris" Content="opdater gøgl" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="447,145,0,0"/>
-        <TextBox x:Name="txtpronr" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.743,2.577" Margin="76,149,0,0"/>
-        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="625,144,0,0" Height="27" SelectionChanged="ComboBox_SelectionChanged">
-            <Label Content="1. Kam"/>
-            <Label Content="2. Saks"/>
-            <Label Content="3. Flothår"/>
+        <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="76,145,0,0" Height="27" SelectionChanged="ComboBox_SelectionChanged">
+            <Label Content="Kam"/>
+            <Label Content="Saks"/>
+            <Label Content="Flothår"/>
         </ComboBox>
+        <Button x:Name="btnfinishorder" Content="Opret order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="642,292,0,0"/>
+        <Button x:Name="btnorderback" Content="Tilbage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="642,330,0,0"/>
     </Grid>
 </Window>
