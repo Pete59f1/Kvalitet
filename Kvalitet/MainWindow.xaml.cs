@@ -27,12 +27,14 @@ namespace Kvalitet
 
         private void BtnCreateOrder_Click(object sender, RoutedEventArgs e)
         {
-
+            CreateOrder co = new CreateOrder();
+            co.Show();
         }
 
         private void BtnCreateCustomer_Click(object sender, RoutedEventArgs e)
         {
-
+            CreateCustomer c = new CreateCustomer();
+            c.Show();
         }
 
         private void BtnFindCustomer_Click(object sender, RoutedEventArgs e)

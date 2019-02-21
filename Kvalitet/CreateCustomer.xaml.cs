@@ -36,6 +36,11 @@ namespace Kvalitet
             control.eventHandler += ExceptionSender;
         }
 
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
         private void ExceptionSender(Object sender, Exception e)
         {
             MessageBox.Show(e.ToString());
