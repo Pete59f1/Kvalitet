@@ -68,9 +68,10 @@ namespace MyApplication
                     }
                     return name + adresse;
                 }
-                catch
+                catch (Exception e)
                 {
-                    return "DB con fucked up.";
+                    NotifyObservers(e);
+                    return "fejl";
                 }
             }
         }

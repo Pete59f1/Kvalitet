@@ -40,7 +40,7 @@ namespace MyApplication
         }
         public string FindCustomer(int id)
         {
-            
+            return dbc.FindCustomer(id);
         }
     }
 }
