@@ -9,9 +9,33 @@ namespace MyApplication
     public class Control
     {
         DBControl dbc;
-        public void CreateCustomer(string name, string address, int zip, string town, string tlf)
+        public Control()
         {
             dbc = new DBControl();
+
+        }
+        public event EventHandler<Exception> eventHandler;
+        public void NotifyObservers(Exception e)
+        {
+            if (eventHandler != null)   //Ensures that if there are no handlers,
+                                        //the event won't be raised
+            {
+                eventHandler(this, e);    //We can also replace
+                                          //EventArgs.Empty with our own message
+            }
+        }
+        public void Subscribe()
+        {
+            dbc.eventHandler += ExceptionSender;
+        }
+
+        private void ExceptionSender(Object sender, Exception e)
+        {
+            NotifyObservers(e);
+        }
+        public void CreateCustomer(string name, string address, int zip, string town, string tlf)
+        {
+            
             dbc.CreateCustomer(name, address, zip, town, tlf);
         }
     }

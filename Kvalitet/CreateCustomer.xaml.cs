@@ -31,5 +31,15 @@ namespace Kvalitet
             control = new MyApplication.Control();
             control.CreateCustomer(txtName.Text, txtAdress.Text, int.Parse(txtZip.Text), txtTown.Text, txtTlph.Text);
         }
+        public void Subscribe()
+        {
+            control.eventHandler += ExceptionSender;
+        }
+
+        private void ExceptionSender(Object sender, Exception e)
+        {
+            MessageBox.Show(e.ToString());
+        }
+
     }
 }
