@@ -39,7 +39,8 @@ namespace Kvalitet
 
         private void BtnFindCustomer_Click(object sender, RoutedEventArgs e)
         {
-
+            FindCustomer fc = new FindCustomer();
+            fc.Show();
         }
 
         private void BtnClose_Click(object sender, RoutedEventArgs e)
