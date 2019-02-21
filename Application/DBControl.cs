@@ -38,6 +38,32 @@ namespace MyApplication
                 }
             }
         }
+        public string FindCustomer(int id)
+        {
+            using(SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("spFindCustomer", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@CustomerId", id));
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    string name = "";
+                    string adresse = "";
+                    while (reader.Read())
+                    {
+                        name = String.Format("{0}", reader[0]);
+                        adresse = String.Format("{0}", reader[1]);
+                    }
+                    return name + adresse;
+                }
+                catch
+                {
+                    return "DB con fucked up.";
+                }
+            }
+        }
 
 
     }

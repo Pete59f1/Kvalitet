@@ -14,5 +14,9 @@ namespace MyApplication
             dbc = new DBControl();
             dbc.CreateCustomer(name, address, zip, town, tlf);
         }
+        public string FindCustomer(int id)
+        {
+            
+        }
     }
 }
