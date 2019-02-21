@@ -23,5 +23,25 @@ namespace Kvalitet
         {
             InitializeComponent();
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Btnorderback_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Btnfinishorder_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Txtantalpro_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
