@@ -23,13 +23,24 @@ namespace Kvalitet
         MyApplication.Control control;
         public CreateCustomer()
         {
+            control = new MyApplication.Control();
             InitializeComponent();
         }
 
         private void BtnCreateCustomer_Click(object sender, RoutedEventArgs e)
         {
-            control = new MyApplication.Control();
-            control.CreateCustomer(txtName.Text, txtAdress.Text, int.Parse(txtZip.Text), txtTown.Text, txtTlph.Text);
+            try
+            {
+                control.CreateCustomer(txtName.Text, txtAdress.Text, int.Parse(txtZip.Text), txtTown.Text, txtTlph.Text);
+            }
+            catch (FormatException exp)
+            {
+                MessageBox.Show(exp.ToString(), "Format Error",MessageBoxButton.OK,MessageBoxImage.Error);
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.ToString(), "Unknown Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
        
 
