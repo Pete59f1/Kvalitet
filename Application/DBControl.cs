@@ -27,7 +27,7 @@ namespace MyApplication
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@Name",name));
                     cmd.Parameters.Add(new SqlParameter("@Address", address));
-                    cmd.Parameters.Add(new SqlParameter("@ZIP", "weq"));
+                    cmd.Parameters.Add(new SqlParameter("@ZIP", zip));
                     cmd.Parameters.Add(new SqlParameter("@Town", town));
                     cmd.Parameters.Add(new SqlParameter("@TLF", tlf));
 
@@ -60,9 +60,9 @@ namespace MyApplication
                     }
                     return name + adresse;
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    NotifyObservers(e);
+                    
                     return "fejl";
                 }
             }
