@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MyApplication;
 
 namespace Kvalitet
 {
@@ -19,6 +20,7 @@ namespace Kvalitet
     /// </summary>
     public partial class CreateCustomer : Window
     {
+        MyApplication.Control control;
         public CreateCustomer()
         {
             InitializeComponent();
@@ -26,7 +28,23 @@ namespace Kvalitet
 
         private void BtnCreateCustomer_Click(object sender, RoutedEventArgs e)
         {
-
+            control = new MyApplication.Control();
+            control.CreateCustomer(txtName.Text, txtAdress.Text, int.Parse(txtZip.Text), txtTown.Text, txtTlph.Text);
         }
+        public void Subscribe()
+        {
+            control.eventHandler += ExceptionSender;
+        }
+
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+        private void ExceptionSender(Object sender, Exception e)
+        {
+            MessageBox.Show(e.ToString());
+        }
+
     }
 }
