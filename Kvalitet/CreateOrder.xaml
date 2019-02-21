@@ -11,14 +11,14 @@
         <Label x:Name="lblro" Content="Produkt" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="76,92,0,0"/>
         <Label x:Name="lblAntal" Content="Antal" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="253,92,0,0" RenderTransformOrigin="0.911,0.459"/>
         <Label x:Name="lblPris" Content="Pris" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="447,92,0,0"/>
-        <TextBox x:Name="txtantalpro" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="253,145,0,0"/>
+        <TextBox x:Name="txtantalpro" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="253,145,0,0" TextChanged="Txtantalpro_TextChanged"/>
         <Label x:Name="lblpropris" Content="opdater gøgl" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="447,145,0,0"/>
         <ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="76,145,0,0" Height="27" SelectionChanged="ComboBox_SelectionChanged">
             <Label Content="Kam"/>
             <Label Content="Saks"/>
             <Label Content="Flothår"/>
         </ComboBox>
-        <Button x:Name="btnfinishorder" Content="Opret order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="642,292,0,0"/>
-        <Button x:Name="btnorderback" Content="Tilbage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="642,330,0,0"/>
+        <Button x:Name="btnfinishorder" Content="Opret order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="642,292,0,0" Click="Btnfinishorder_Click"/>
+        <Button x:Name="btnorderback" Content="Tilbage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="642,330,0,0" Click="Btnorderback_Click"/>
     </Grid>
 </Window>
