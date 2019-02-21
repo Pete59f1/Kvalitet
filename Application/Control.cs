@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace MyApplication
 {
-    class Control
+    public class Control
     {
+        DBControl dbc;
+        public void CreateCustomer(string name, string address, int zip, string town, string tlf)
+        {
+            dbc = new DBControl();
+            dbc.CreateCustomer(name, address, zip, town, tlf);
+        }
     }
 }
