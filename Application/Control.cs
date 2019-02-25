@@ -14,7 +14,7 @@ namespace MyApplication
             dbc = new DBControl();
 
         }
-        ProductRepo prod;
+        public ProductRepo prod;
         
         public void CreateCustomer(string name, string address, int zip, string town, string tlf)
         {

@@ -68,7 +68,6 @@ namespace MyApplication
                 }
             }
         }
-        public ProductRepo GetProduct()
         public void CreateOrder(int customerId)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -86,6 +85,8 @@ namespace MyApplication
                 }
             }
         }
+        public ProductRepo GetProduct()
+
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
