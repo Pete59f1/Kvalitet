@@ -28,7 +28,7 @@ namespace Kvalitet
 
         private void BtnFindCustomer_Click(object sender, RoutedEventArgs e)
         {
-            if (con.FindCustomer(int.Parse(txtCustomerId.Text)) == "fejl")
+            if (con.FindCustomer(int.Parse(txtCustomerId.Text)) == "")
             {
                 btnCreateCustomer.Visibility = Visibility;
                 lblFoundCustomer.Visibility = Visibility;
