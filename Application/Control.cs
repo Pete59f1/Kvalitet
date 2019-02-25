@@ -18,7 +18,6 @@ namespace MyApplication
        
         public void CreateCustomer(string name, string address, int zip, string town, string tlf)
         {
-            
             dbc.CreateCustomer(name, address, zip, town, tlf);
         }
         public string FindCustomer(int id)

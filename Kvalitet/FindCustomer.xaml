@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:Kvalitet"
         mc:Ignorable="d"
         Title="FindCustomer" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="SteelBlue">
+        <TextBox Name="txtCustomerId" ToolTip="Kunde id" HorizontalAlignment="Left" Height="30" Margin="335,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130"/>
+        <Button Name="btnFindCustomer" Content="Find kunde" HorizontalAlignment="Left" Margin="528,95,0,0" VerticalAlignment="Top" Width="75" Click="BtnFindCustomer_Click"/>
+        <Button Visibility="Hidden" Name="btnCreateCustomer" Content="Opret Kunde" HorizontalAlignment="Left" Margin="528,169,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.48,-0.85" Click="BtnCreateCustomer_Click"/>
+        <Button Visibility="Hidden" Name="btnCreateOrder" Content="Opret ordre" HorizontalAlignment="Left" Margin="528,241,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.387,-1.2" Click="BtnCreateOrder_Click"/>
+        <Label Visibility="Hidden" Name="lblFoundCustomer" Content="" HorizontalAlignment="Left" Margin="300,163,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.8,0.615"/>
+
     </Grid>
 </Window>
