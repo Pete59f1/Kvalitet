@@ -96,8 +96,6 @@ namespace MyApplication
                     SqlCommand cmd = new SqlCommand("spGetProduct", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     SqlDataReader reader = cmd.ExecuteReader();
-                    string name = "";
-                    double price;
                     ProductRepo products = new ProductRepo();
                     Product product;
                     while (reader.Read())
