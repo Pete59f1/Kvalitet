@@ -38,7 +38,7 @@ namespace Kvalitet
             {
                 btnCreateOrder.Visibility = Visibility;
                 lblFoundCustomer.Visibility = Visibility;
-                lblFoundCustomer.Content = "Kunde fundet. Opret ny ordre";
+                lblFoundCustomer.Content = "Kunde med navnet " + con.FindCustomer(int.Parse(txtCustomerId.Text)) + "\nOpret ny ordre";
             }
         }
 
