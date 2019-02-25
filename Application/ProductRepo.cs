@@ -17,5 +17,18 @@ namespace MyApplication
         {
             return RepoList[index].Price;
         }
+
+        private int count;
+
+        public int GetCount()
+        {
+            SetCount();
+            return count;
+        }
+
+        private void SetCount()
+        {
+            count = RepoList.Count;
+        }
     }
 }

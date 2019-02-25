@@ -24,11 +24,18 @@ namespace Kvalitet
         {
             control = new MyApplication.Control();
             InitializeComponent();
+            control.GetProducts();
+            for (int i = 0; i < control.prod.GetCount(); i++)
+            {
+                string item = control.prod.GetName(i);
+                combopro.Items.Add(item);
+            }
+
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
+          
         }
 
         private void Btnorderback_Click(object sender, RoutedEventArgs e)
