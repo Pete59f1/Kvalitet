@@ -70,6 +70,7 @@ namespace MyApplication
         }
         public ProductRepo GetProduct()
         {
+            ProductRepo products = new ProductRepo();
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 try
@@ -79,22 +80,23 @@ namespace MyApplication
                     cmd.CommandType = CommandType.StoredProcedure;
                     SqlDataReader reader = cmd.ExecuteReader();
                     string name = "";
-                    double price;
-                    ProductRepo products = new ProductRepo();
-                    Product product;
+                    double price = 0.0;
+                    //Product product;
                     while (reader.Read())
                     {
-                        product = new Product();
-                        product.Name = String.Format("{0}", reader[0]);
-                        product.Price = Convert.ToDouble(String.Format("{0}", reader[1]));
-                        products.Add(product);
+                        ////product = new Product();
+                        ////product.Name = String.Format("{0}", reader[0]);
+                        ////product.Price = Convert.ToDouble(String.Format("{0}", reader[1]));
+                        ////products.Add(product);
+                        products.Add(new Product { Name = name, Price = price });
                     }
-                    return products;
                 }
                 catch (Exception e)
                 {
+
                     throw e;
                 }
+                return products;
             }
         }
 

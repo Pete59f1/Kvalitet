@@ -19,8 +19,10 @@ namespace Kvalitet
     /// </summary>
     public partial class CreateOrder : Window
     {
+        MyApplication.Control con;
         public CreateOrder()
         {
+            con = new MyApplication.Control();
             InitializeComponent();
         }
 
