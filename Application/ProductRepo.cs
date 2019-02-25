@@ -7,7 +7,7 @@ using Domain;
 
 namespace MyApplication
 {
-    class ProductRepo: Repo<Product>
+    public class ProductRepo: Repo<Product>
     {
     }
 }

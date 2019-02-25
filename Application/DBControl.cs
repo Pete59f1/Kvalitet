@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using Domain;
 
 namespace MyApplication
 {
@@ -67,7 +68,7 @@ namespace MyApplication
                 }
             }
         }
-
+        public ProductRepo GetProduct()
         public void CreateOrder(int customerId)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -82,6 +83,34 @@ namespace MyApplication
                 {
 
                     throw;
+                }
+            }
+        }
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("spGetProduct", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    string name = "";
+                    double price;
+                    ProductRepo products = new ProductRepo();
+                    Product product;
+                    while (reader.Read())
+                    {
+                        product = new Product();
+                        product.Name = String.Format("{0}", reader[0]);
+                        product.Price = Convert.ToDouble(String.Format("{0}", reader[1]));
+                        products.Add(product);
+                    }
+                    return products;
+                }
+                catch (Exception e)
+                {
+                    throw e;
                 }
             }
         }

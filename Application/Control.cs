@@ -14,8 +14,8 @@ namespace MyApplication
             dbc = new DBControl();
 
         }
-       
-       
+        ProductRepo prod;
+        
         public void CreateCustomer(string name, string address, int zip, string town, string tlf)
         {
             dbc.CreateCustomer(name, address, zip, town, tlf);
@@ -23,6 +23,10 @@ namespace MyApplication
         public string FindCustomer(int id)
         {
             return dbc.FindCustomer(id);
+        }
+        public void GetProducts()
+        {
+            prod = dbc.GetProduct();
         }
     }
 }
