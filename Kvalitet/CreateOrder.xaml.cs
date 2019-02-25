@@ -19,10 +19,10 @@ namespace Kvalitet
     /// </summary>
     public partial class CreateOrder : Window
     {
-        MyApplication.Control con;
+        MyApplication.Control control;
         public CreateOrder()
         {
-            con = new MyApplication.Control();
+            control = new MyApplication.Control();
             InitializeComponent();
         }
 
@@ -34,6 +34,7 @@ namespace Kvalitet
         private void Btnorderback_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+            
         }
 
         private void Btnfinishorder_Click(object sender, RoutedEventArgs e)
@@ -44,7 +45,7 @@ namespace Kvalitet
 
         private void Txtantalpro_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            
         }
 
         private void TxtKundenNr_TextChanged(object sender, TextChangedEventArgs e)

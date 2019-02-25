@@ -68,9 +68,26 @@ namespace MyApplication
                 }
             }
         }
-        public ProductRepo GetProduct()
+        public void CreateOrder(int customerId)
         {
-            ProductRepo products = new ProductRepo();
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("spCreateOrder", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+        }
+        public ProductRepo GetProduct()
+
+        {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 try
@@ -79,24 +96,21 @@ namespace MyApplication
                     SqlCommand cmd = new SqlCommand("spGetProduct", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     SqlDataReader reader = cmd.ExecuteReader();
-                    string name = "";
-                    double price = 0.0;
-                    //Product product;
+                    ProductRepo products = new ProductRepo();
+                    Product product;
                     while (reader.Read())
                     {
-                        ////product = new Product();
-                        ////product.Name = String.Format("{0}", reader[0]);
-                        ////product.Price = Convert.ToDouble(String.Format("{0}", reader[1]));
-                        ////products.Add(product);
-                        products.Add(new Product { Name = name, Price = price });
+                        product = new Product();
+                        product.Name = String.Format("{0}", reader[0]);
+                        product.Price = Convert.ToDouble(String.Format("{0}", reader[1]));
+                        products.Add(product);
                     }
+                    return products;
                 }
                 catch (Exception e)
                 {
-
                     throw e;
                 }
-                return products;
             }
         }
 

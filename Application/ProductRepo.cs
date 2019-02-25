@@ -9,5 +9,13 @@ namespace MyApplication
 {
     public class ProductRepo: Repo<Product>
     {
+        public string GetName(int index)
+        {
+            return RepoList[index].Name;
+        }
+        public double GetPrice(int index)
+        {
+            return RepoList[index].Price;
+        }
     }
 }
