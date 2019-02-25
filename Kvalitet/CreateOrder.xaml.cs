@@ -36,10 +36,16 @@ namespace Kvalitet
 
         private void Btnfinishorder_Click(object sender, RoutedEventArgs e)
         {
-
+            txtantalpro.Clear();
+            combopro.Text = "";
         }
 
         private void Txtantalpro_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TxtKundenNr_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
