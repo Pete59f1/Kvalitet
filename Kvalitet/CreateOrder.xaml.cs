@@ -26,7 +26,7 @@ namespace Kvalitet
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            
         }
 
         private void Btnorderback_Click(object sender, RoutedEventArgs e)

@@ -52,6 +52,8 @@ namespace Kvalitet
         {
             CreateOrder co = new CreateOrder();
             co.Show();
+            co.txtcusNr.Text = txtCustomerId.Text;
         }
+       
     }
 }
