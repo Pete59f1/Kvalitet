@@ -68,6 +68,23 @@ namespace MyApplication
             }
         }
 
+        public void CreateOrder(int customerId)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("spCreateOrder", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+        }
 
     }
 }
