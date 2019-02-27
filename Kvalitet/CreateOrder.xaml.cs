@@ -63,7 +63,11 @@ namespace Kvalitet
                 lblpropris.Content = price;
             }
 
-            
+                
+            if ( ! txtantalpro.Text.Equals(string.Empty))
+            {
+                lblproprize.Content = productprize * amount;
+            }
         }
 
         private void TxtKundenNr_TextChanged(object sender, TextChangedEventArgs e)

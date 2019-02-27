@@ -28,5 +28,18 @@ namespace MyApplication
         {
             prod = dbc.GetProduct();
         }
+        public double PriceOfProduct(string product)
+        {
+            double price = 0;
+            for (int i = 0; i < prod.GetCount() - 1; i++)
+            {
+                if (prod.GetName(i) == product)
+                {
+                    price = prod.GetPrice(i);
+                }
+
+            }
+            return price;
+        }
     }
 }
