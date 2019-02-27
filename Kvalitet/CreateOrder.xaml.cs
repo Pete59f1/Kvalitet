@@ -35,7 +35,8 @@ namespace Kvalitet
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-          
+            lblproprize.Content=control.PriceOfProduct(combopro.Text);
+            
         }
 
         private void Btnorderback_Click(object sender, RoutedEventArgs e)
@@ -52,7 +53,14 @@ namespace Kvalitet
 
         private void Txtantalpro_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+            double productprize = control.PriceOfProduct(combopro.Text);
+            double amount = double.Parse(txtantalpro.Text);
+            lblproprize.Content = 0;
+                
+            if ( ! txtantalpro.Text.Equals(string.Empty))
+            {
+                lblproprize.Content = productprize * amount;
+            }
         }
 
         private void TxtKundenNr_TextChanged(object sender, TextChangedEventArgs e)

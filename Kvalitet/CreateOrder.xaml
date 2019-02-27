@@ -12,7 +12,7 @@
         <Label x:Name="lblAntal" Content="Antal" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="253,92,0,0" RenderTransformOrigin="0.911,0.459"/>
         <Label x:Name="lblPris" Content="Pris" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="447,92,0,0"/>
         <TextBox x:Name="txtantalpro" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="253,145,0,0" TextChanged="Txtantalpro_TextChanged"/>
-        <Label x:Name="lblpropris" FontSize="14" Content="0 ,-" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="447,145,0,0"/>
+        <Label x:Name="lblproprize" FontSize="14" Content="0 ,-" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="447,145,0,0"/>
         <ComboBox x:Name="combopro" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="76,145,0,0" Height="27" SelectionChanged="ComboBox_SelectionChanged">
             <!--<Label x:Name="lblKam" Content="Kam"/>
             <Label x:Name="lblSkas" Content="Saks"/>
