@@ -30,12 +30,13 @@ namespace Kvalitet
                 string item = control.prod.GetName(i);
                 combopro.Items.Add(item);
             }
-
+            combopro.SelectedIndex = 0;
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-          
+            lblpropris.Content = control.prod.GetPrice(combopro.SelectedIndex);
+            txtantalpro.Text = string.Empty;
         }
 
         private void Btnorderback_Click(object sender, RoutedEventArgs e)
@@ -52,6 +53,16 @@ namespace Kvalitet
 
         private void Txtantalpro_TextChanged(object sender, TextChangedEventArgs e)
         {
+            double price = 0;
+            lblpropris.Content = control.prod.GetPrice(combopro.SelectedIndex);
+            price = Convert.ToDouble(lblpropris.Content);
+
+            if (txtantalpro.Text != string.Empty)
+            {
+                price *= Convert.ToDouble(txtantalpro.Text);
+                lblpropris.Content = price;
+            }
+
             
         }
 
