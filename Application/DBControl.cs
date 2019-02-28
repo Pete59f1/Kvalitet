@@ -110,11 +110,9 @@ namespace MyApplication
                     con.Open();
                     SqlCommand cmd = new SqlCommand("spCreateSaleOrderLine", con);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    SqlCommand cmd2 = new SqlCommand("spFindLatestOrderId", con);
-                    cmd2.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@ProductId", productId));
                     cmd.Parameters.Add(new SqlParameter("@Quantity", quantity));
-                    cmd.Parameters.Add(new SqlParameter("@OrderId", cmd2));
+                    cmd.Parameters.Add(new SqlParameter("@OrderId", GetOrderId()));
 
                     cmd.ExecuteNonQuery();
 
@@ -147,6 +145,32 @@ namespace MyApplication
                         products.Add(product);
                     }
                     return products;
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+        }
+        internal int GetOrderId()
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("spFindLatestOrderId", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    int orderId = 0;
+                    string orderIdString = null;
+                    while (reader.Read())
+                    {
+                        orderIdString = String.Format("{0}", reader[0]);
+                    }
+                    orderId = int.Parse(orderIdString);
+                    return orderId;
                 }
                 catch (Exception e)
                 {
