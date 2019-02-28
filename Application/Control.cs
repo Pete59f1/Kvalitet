@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Domain;
 
 namespace MyApplication
 {
     public class Control
     {
+        List<SaleOrderLine> orders = new List<SaleOrderLine>();
         DBControl dbc;
         private static readonly Control _instance = new Control();
         
@@ -24,9 +26,17 @@ namespace MyApplication
 
         public ProductRepo prod;
         
-        public void CreateSaleOrderLine(int productId, int quantity, int orderId)
+        public void CreateSaleOrderLine(int productId, int quantity)
         {
-            dbc.CreateSaleOrderLine(productId, quantity, orderId);
+            orders.Add(new SaleOrderLine { Product = productId, Quantity = quantity });
+
+        }
+        public void TerminateOrder()
+        {
+            foreach(SaleOrderLine item in orders)
+            {
+                dbc.CreateSaleOrderLine(item.Product, item.Quantity);
+            }
         }
         public void CreateOrder(int customerId, DateTime dateTime)
         {
@@ -57,5 +67,6 @@ namespace MyApplication
             }
             return price;
         }
+        
     }
 }

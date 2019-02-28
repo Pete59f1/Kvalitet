@@ -101,7 +101,7 @@ namespace MyApplication
             }
         }
 
-        internal void CreateSaleOrderLine(int productId, int quantity, int orderId)
+        internal void CreateSaleOrderLine(int productId, int quantity)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -112,7 +112,6 @@ namespace MyApplication
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@ProductId", productId));
                     cmd.Parameters.Add(new SqlParameter("@Quantity", quantity));
-                    cmd.Parameters.Add(new SqlParameter("@OrderId", orderId));
 
                     cmd.ExecuteNonQuery();
 

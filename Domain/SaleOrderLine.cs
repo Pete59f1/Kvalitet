@@ -8,12 +8,12 @@ namespace Domain
 {
     public class SaleOrderLine
     {
-        private Product product;
+        private int product;
         private int quantity;
-        private double price;
+     
 
-        public Product Product { get { return product; } set { product = value; } }
+        public int Product { get { return product; } set { product = value; } }
         public int Quantity { get { return quantity; } set { quantity = value; } }
-        public double Price { get { return price; } set { price = value; } }
+        
     }
 }
