@@ -110,8 +110,11 @@ namespace MyApplication
                     con.Open();
                     SqlCommand cmd = new SqlCommand("spCreateSaleOrderLine", con);
                     cmd.CommandType = CommandType.StoredProcedure;
+                    SqlCommand cmd2 = new SqlCommand("spFindLatestOrderId", con);
+                    cmd2.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@ProductId", productId));
                     cmd.Parameters.Add(new SqlParameter("@Quantity", quantity));
+                    cmd.Parameters.Add(new SqlParameter("@OrderId", cmd2));
 
                     cmd.ExecuteNonQuery();
 
