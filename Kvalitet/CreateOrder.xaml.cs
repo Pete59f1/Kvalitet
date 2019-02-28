@@ -22,7 +22,7 @@ namespace Kvalitet
         MyApplication.Control control;
         public CreateOrder()
         {
-            control = new MyApplication.Control();
+            control = MyApplication.Control.Instance;
             InitializeComponent();
             control.GetProducts();
             for (int i = 0; i < control.prod.GetCount(); i++)

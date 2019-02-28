@@ -13,11 +13,21 @@ namespace MyApplication
 
     internal class DBControl 
     {
-       
+       private static readonly DBControl _instance = new DBControl();
+
+        private DBControl()
+        {
+
+        }
+        static DBControl()
+        {
+
+        }
+        internal static DBControl Instance { get => _instance; }
 
         private static string connectionString = 
             "Server=michaldatabase.database.windows.net; Database= KvalitetProject; User Id=sasjumb; Password=Super123!;";
-        public void CreateCustomer(string name, string address, int zip, string town, string tlf)
+        internal void CreateCustomer(string name, string address, int zip, string town, string tlf)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -41,7 +51,7 @@ namespace MyApplication
                 }
             }
         }
-        public string FindCustomer(int id)
+        internal string FindCustomer(int id)
         {
             using(SqlConnection con = new SqlConnection(connectionString))
             {
@@ -68,7 +78,7 @@ namespace MyApplication
                 }
             }
         }
-        public void CreateOrder(int customerId)
+        internal void CreateOrder(int customerId)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -85,7 +95,7 @@ namespace MyApplication
                 }
             }
         }
-        public ProductRepo GetProduct()
+        internal ProductRepo GetProduct()
 
         {
             using (SqlConnection con = new SqlConnection(connectionString))

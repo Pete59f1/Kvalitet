@@ -22,7 +22,7 @@ namespace Kvalitet
         MyApplication.Control con;
         public FindCustomer()
         {
-            con = new MyApplication.Control();
+            con = MyApplication.Control.Instance;
             InitializeComponent();
         }
 

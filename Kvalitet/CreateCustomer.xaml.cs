@@ -23,7 +23,7 @@ namespace Kvalitet
         MyApplication.Control control;
         public CreateCustomer()
         {
-            control = new MyApplication.Control();
+            control = MyApplication.Control.Instance;
             InitializeComponent();
         }
 

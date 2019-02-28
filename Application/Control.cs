@@ -9,11 +9,19 @@ namespace MyApplication
     public class Control
     {
         DBControl dbc;
-        public Control()
+        private static readonly Control _instance = new Control();
+        
+        private Control()
         {
-            dbc = new DBControl();
+            dbc = DBControl.Instance;
 
         }
+        static Control()
+        {
+
+        }
+        public static Control Instance { get => _instance; }
+
         public ProductRepo prod;
         
         public void CreateCustomer(string name, string address, int zip, string town, string tlf)
