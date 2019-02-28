@@ -38,9 +38,9 @@ namespace MyApplication
                 dbc.CreateSaleOrderLine(item.Product, item.Quantity);
             }
         }
-        public void CreateOrder(int customerId, DateTime dateTime)
+        public void CreateOrder(int customerId)
         {
-            dbc.CreateOrder(customerId, dateTime);
+            dbc.CreateOrder(customerId);
         }
         public void CreateCustomer(string name, string address, int zip, string town, string tlf)
         {

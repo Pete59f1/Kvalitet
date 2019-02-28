@@ -78,7 +78,7 @@ namespace MyApplication
                 }
             }
         }
-        internal void CreateOrder(int customerId, DateTime dateTime)
+        internal void CreateOrder(int customerId)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -88,7 +88,8 @@ namespace MyApplication
                     SqlCommand cmd = new SqlCommand("spCreateOrder", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@CustomerId", customerId));
-                    cmd.Parameters.Add(new SqlParameter("@DeliveryDate", dateTime));
+                    DateTime dateTime = DateTime.Today;
+                    cmd.Parameters.Add(new SqlParameter("@DeliveryDate", dateTime.AddDays(4)));
 
                     cmd.ExecuteNonQuery();
 

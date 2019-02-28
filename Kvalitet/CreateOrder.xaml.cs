@@ -47,8 +47,10 @@ namespace Kvalitet
 
         private void Btnfinishorder_Click(object sender, RoutedEventArgs e)
         {
+            control.CreateOrder(int.Parse(txtcusNr.Text));
+            control.TerminateOrder();
             txtantalpro.Clear();
-            combopro.Text = "";
+            this.Close();
         }
 
         private void Txtantalpro_TextChanged(object sender, TextChangedEventArgs e)
@@ -69,6 +71,17 @@ namespace Kvalitet
         private void TxtKundenNr_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void BtnAddPro_Click(object sender, RoutedEventArgs e)
+        {
+           
+                int proID = combopro.SelectedIndex+1;
+                control.CreateSaleOrderLine(proID, int.Parse(txtantalpro.Text));
+                txtantalpro.Clear();
+                
+            
+            
         }
     }
 }

@@ -20,9 +20,10 @@
             <Label x:Name="lblStol" Content="Stol"/>
             <Label x:Name="lblMads" Content="Mads"/>-->
         </ComboBox>
-        <Button x:Name="btnfinishorder" Content="Opret order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="642,292,0,0" Click="Btnfinishorder_Click"/>
+        <Button x:Name="btnfinishorder" Content="Afslut order" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="642,292,0,0" Click="Btnfinishorder_Click"/>
         <Button x:Name="btnorderback" Content="Tilbage" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="642,330,0,0" Click="Btnorderback_Click"/>
         <TextBox x:Name="txtcusNr"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120" Margin="76,0,0,347" TextChanged="TxtKundenNr_TextChanged" RenderTransformOrigin="0.5,0.526"/>
         <Label x:Name="lblcus" FontSize="14" Content="Kunde nummer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="76,10,0,0"/>
+        <Button x:Name="btnAddPro" Content="Tilføj produkt" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="642,254,0,0" Click="BtnAddPro_Click"/>
     </Grid>
 </Window>

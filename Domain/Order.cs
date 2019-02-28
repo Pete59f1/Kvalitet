@@ -22,9 +22,9 @@ namespace Domain
         public bool Picked { get { return picked; } set { picked = value; } }
         private List<SaleOrderLine> OrderLines { get { return orderLines; } set { orderLines = value; } }
 
-        public void AddOrderLine(Product product, int quantity, double price)
+        public void AddOrderLine(int product, int quantity)
         {
-            OrderLines.Add(new SaleOrderLine { Product = product, Quantity = quantity, Price = price });
+            OrderLines.Add(new SaleOrderLine { Product = product, Quantity = quantity });
         }
 
         public void RemoveOrderLine(int index)
