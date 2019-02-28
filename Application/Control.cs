@@ -24,6 +24,14 @@ namespace MyApplication
 
         public ProductRepo prod;
         
+        public void CreateSaleOrderLine(int productId, int quantity, int orderId)
+        {
+            dbc.CreateSaleOrderLine(productId, quantity, orderId);
+        }
+        public void CreateOrder(int customerId, DateTime dateTime)
+        {
+            dbc.CreateOrder(customerId, dateTime);
+        }
         public void CreateCustomer(string name, string address, int zip, string town, string tlf)
         {
             dbc.CreateCustomer(name, address, zip, town, tlf);
