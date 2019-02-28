@@ -78,7 +78,7 @@ namespace MyApplication
                 }
             }
         }
-        internal void CreateOrder(int customerId)
+        internal void CreateOrder(int customerId, DateTime dateTime)
         {
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -87,6 +87,35 @@ namespace MyApplication
                     con.Open();
                     SqlCommand cmd = new SqlCommand("spCreateOrder", con);
                     cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@CustomerId", customerId));
+                    cmd.Parameters.Add(new SqlParameter("@DeliveryDate", dateTime));
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+        }
+
+        internal void CreateSaleOrderLine(int productId, int quantity, int orderId)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("spCreateSaleOrderLine", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@ProductId", productId));
+                    cmd.Parameters.Add(new SqlParameter("@Quantity", quantity));
+                    cmd.Parameters.Add(new SqlParameter("@OrderId", orderId));
+
+                    cmd.ExecuteNonQuery();
+
                 }
                 catch (Exception)
                 {
